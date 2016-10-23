@@ -10,6 +10,9 @@ import { Demo2Component } from './demo2/demo2.component';
 import { Demo3Component } from './demo3/demo3.component';
 import { HomeComponent } from './home/home.component';
 import { Demo4Component } from './demo4/demo4.component';
+import { Demo5Component } from './demo5/demo5.component';
+import { Demo6Component } from './demo6/demo6.component';
+import { LineComponent } from './line/line.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { Demo4Component } from './demo4/demo4.component';
     Demo2Component,
     Demo3Component,
     HomeComponent,
-    Demo4Component
+    Demo4Component,
+    Demo5Component,
+    Demo6Component,
+    LineComponent
   ],
   imports: [
     BrowserModule,
