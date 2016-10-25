@@ -15,7 +15,7 @@ export class Demo6Component implements OnInit {
     const OFFSET_X = 10;
     const OFFSET_Y = 66;
 
-    Observable
+    const draw$ = Observable
       .fromEvent(document, 'mousemove')
       .map((event: MouseEvent) => {
         return { x : event.pageX - OFFSET_X, y : event.pageY - OFFSET_Y };
@@ -25,7 +25,15 @@ export class Demo6Component implements OnInit {
         const p1 = positions[0];
         const p2 = positions[1];
         return { x1: p1.x, y1: p1.y, x2: p2.x, y2: p2.y };
-      })
+      });
+
+    const click$ = Observable.fromEvent(document, 'click');
+
+    const enter$ = Observable.fromEvent(document, 'keydown')
+              .filter((event: KeyboardEvent) => event.keyCode === 13);
+
+    click$
+      .switchMap(event => draw$.takeUntil(enter$))
       .subscribe(line => { this.lines = [...this.lines, line]});
   }
 
