@@ -12,18 +12,13 @@ export class Demo6Component implements OnInit {
   lines: any[] = [];
 
   ngOnInit() {
+    const OFFSET_X = 10;
+    const OFFSET_Y = 66;
+
     Observable
-      .fromEvent(document, 'click')
+      .fromEvent(document, 'mousemove')
       .map((event: MouseEvent) => {
-        let x = event.pageX;
-        let y = event.pageY;
-        if (x > 404) {
-          x = 404;
-        }
-        if (y > 404) {
-          y = 404;
-        }
-        return { x: x, y: y };
+        return { x : event.pageX - OFFSET_X, y : event.pageY - OFFSET_Y };
       })
       .pairwise()
       .map(positions => {

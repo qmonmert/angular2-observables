@@ -13,6 +13,7 @@ import { Demo4Component } from './demo4/demo4.component';
 import { Demo5Component } from './demo5/demo5.component';
 import { Demo6Component } from './demo6/demo6.component';
 import { LineComponent } from './line/line.component';
+import { Demo7Component } from './demo7/demo7.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { LineComponent } from './line/line.component';
     Demo4Component,
     Demo5Component,
     Demo6Component,
-    LineComponent
+    LineComponent,
+    Demo7Component
   ],
   imports: [
     BrowserModule,
