@@ -14,6 +14,7 @@ import { Demo5Component } from './demo5/demo5.component';
 import { Demo6Component } from './demo6/demo6.component';
 import { LineComponent } from './line/line.component';
 import { Demo7Component } from './demo7/demo7.component';
+import { CircleComponent } from './circle/circle.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { Demo7Component } from './demo7/demo7.component';
     Demo5Component,
     Demo6Component,
     LineComponent,
-    Demo7Component
+    Demo7Component,
+    CircleComponent
   ],
   imports: [
     BrowserModule,

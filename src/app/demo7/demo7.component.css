@@ -1,0 +1,15 @@
+.commands {
+    margin-bottom: 10px;
+    margin-top: 10px; 
+}
+
+.container {
+    background-color: lightgray;
+    border: 1px solid black;
+    height: 400px;
+    width: 400px;
+}
+
+app-circle {
+    position: absolute;
+}

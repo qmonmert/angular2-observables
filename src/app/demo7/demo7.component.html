@@ -1,3 +1,12 @@
-<p>
-  demo7 works!
-</p>
+<div class="commands">
+  Move the mouse
+</div>
+
+<div class="container">
+  <app-circle 
+      *ngFor="let circle of circles"
+      [style.left]="circle.x + 'px'"
+      [style.top]="circle.y + 'px'">
+  </app-circle>
+
+</div>
